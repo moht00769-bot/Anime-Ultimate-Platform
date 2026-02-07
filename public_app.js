@@ -1,7 +1,7 @@
 let page=1
 
 async function load(){
- const res=await fetch(`/api/anime?page=${page}`)
+ const res=await fetch(`./api/anime?page=${page}`)
  const data=await res.json()
  const c=document.getElementById("content")
  data.forEach(i=>{
@@ -27,3 +27,4 @@ ws.onmessage=e=>{
  if(data.type==="anime"){
   location.reload()
  }
+}
